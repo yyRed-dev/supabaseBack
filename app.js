@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 const supabase = 
-    supabaseClient.createClient('https://vbckblhnhacruknubbxe.supabase.co/rest/v1/', 
+    supabaseClient.createClient('https://supabase.com/dashboard/project/vbckblhnhacruknubbxe', 
         'sb_publishable_1fQ2Zu7AstoG3yveZubwGQ_Ai2I4EmX')
 
 
