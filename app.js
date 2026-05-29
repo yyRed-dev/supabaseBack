@@ -17,9 +17,9 @@ const app = express();
 
 const cors=require("cors");
 const corsOptions ={
-   origin:'*', 
-   credentials:true,            //access-control-allow-credentials:true
-   optionSuccessStatus:200,
+    origin:'*',
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200,
 }
 
 app.use(cors(corsOptions)) // Use this after the variable declaration
@@ -31,8 +31,8 @@ app.use(morgan('combined'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-const supabase = 
-    supabaseClient.createClient('https://vbckblhnhacruknubbxe.supabase.co', 
+const supabase =
+    supabaseClient.createClient('https://vbckblhnhacruknubbxe.supabase.co/rest/v1/', 
         'sb_publishable_1fQ2Zu7AstoG3yveZubwGQ_Ai2I4EmX')
 
 
@@ -106,8 +106,7 @@ app.get('/', (req, res) => {
     res.send("Hello I am working my friend Supabase <3");
 });
 
-/*
-app.get('*', (req, res) => {
+/* app.get('*', (req, res) => {
     res.send("Hello again I am working my friend to the moon and behind <3");
 }); */
 
